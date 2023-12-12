@@ -7,9 +7,19 @@
 </head>
 <body>
     <form>
-        <input type="text" placeholder="title">
-        <input type="number" placeholder="rating">
+        <input type="text" id="title" placeholder="title">
+        <input type="number" id="rating"  placeholder="rating">
         <button type="submit">submit</button>
     </form>
+    <div id="list"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $('form').on('submit', function(e)   {
+            e.preventDefault();
+            let title = $('#title').val();
+            let rating = $('#rating').val();
+            $('#list').append(`<div>Title:${title} Rating:${rating}' <button class='remove'>Remove</button></div>`)
+        })
+    </script>
 </body>
 </html>

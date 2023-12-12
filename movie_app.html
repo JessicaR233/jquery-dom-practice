@@ -20,6 +20,11 @@
             let rating = $('#rating').val();
             $('#list').append(`<div>Title:${title} Rating:${rating}' <button class='remove'>Remove</button></div>`)
         })
+
+        $(document).on('click','.remove',function()  {
+            // console.log('this');
+            $(this).parent().remove();
+        })
     </script>
 </body>
 </html>

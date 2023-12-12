@@ -89,6 +89,9 @@
   // 4.set the font size of the title to be a random pixel size from 0 to 100.
   const pixelRandom = Math.floor(Math.random()*101);
   $('#title').css('font-size', pixelRandom + 'px');
+
+  // 5.Add an item to the list; it can say whatever you want.
+  $('ol').append('<li>Hey, I successfully add new thing!</li>');
 </script>
 </body>
 

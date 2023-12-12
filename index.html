@@ -92,6 +92,10 @@
 
   // 5.Add an item to the list; it can say whatever you want.
   $('ol').append('<li>Hey, I successfully add new thing!</li>');
+
+  // 6.Scratch that; the list is silly. Empty the aside and put a paragraph in it apologizing for the list’s existence.
+  // $('ol li').remove().add('p').text('sorry for the silly list');
+  $('ol').empty().append('<p>sorry for the silly list</p>');
 </script>
 </body>
 

@@ -99,20 +99,25 @@
 
   //7. When you change the numbers in the three inputs on the bottom, the background color of the body should change to match whatever the three values in the inputs are.
   
-  // $('.form-control').on('change', function()  {
-  //   let red = $('.form-control').eq(0).val();
-  // let blue = $('.form-control').eq(1).val();
-  // let green = $('.form-control').eq(2).val();
-  // let backgroundcolor = `rgb(${red},${green},${blue})`;
-  //   $('body').css('background-color', backgroundcolor);
-  // })
-  $(".form-control").on('keyup blur change', function () {
-      let red = $(".form-control").eq(0).val();
-      let blue = $(".form-control").eq(1).val();
-      let green = $(".form-control").eq(2).val();
-      $("body").css("background-color",
-          "rgb(" + red + "," + green + "," + blue + ")");
-    });
+  $('.form-control').on('keyup blur change', function()  {
+  
+  let red = $('.form-control').eq(0).val();
+  // console.log(red);
+  let blue = $('.form-control').eq(1).val();
+  let green = $('.form-control').eq(2).val();
+  let backgroundcolor = `rgb(${red},${green},${blue})`;
+  // console.log(backgroundcolor);
+    $('body').css('background-color', backgroundcolor);
+  })
+
+
+  // $(".form-control").on('keyup blur change', function () {
+  //     let red = $(".form-control").eq(0).val();
+  //     let blue = $(".form-control").eq(1).val();
+  //     let green = $(".form-control").eq(2).val();
+  //     $("body").css("background-color",
+  //         "rgb(" + red + "," + green + "," + blue + ")");
+  //   });
 
     // 8.Add an event listener so that when you click on the image, it is removed from the DOM.
     $('img').on('click', function() {
